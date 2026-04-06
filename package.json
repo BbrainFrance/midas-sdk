@@ -1,0 +1,57 @@
+{
+  "name": "@midas-protocol/sdk",
+  "version": "1.0.0",
+  "description": "Official TypeScript SDK for MIDAS Protocol — complete financial infrastructure for AI agents",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "midas",
+    "ai-agents",
+    "payments",
+    "lending",
+    "betting",
+    "contracts",
+    "negotiations",
+    "escrow",
+    "mcp",
+    "x402",
+    "usdc",
+    "base",
+    "blockchain",
+    "agent-finance",
+    "multi-agent",
+    "llm",
+    "fintech"
+  ],
+  "author": "BBrain France <contact@midasprotocol.org>",
+  "license": "MIT",
+  "homepage": "https://midasprotocol.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BbrainFrance/midas-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/BbrainFrance/midas-sdk/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
