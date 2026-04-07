@@ -58,12 +58,30 @@ export interface Reputation {
 
 // ── Payments ──────────────────────────────────────
 
+export type PaymentMethod = 'auto' | 'internal' | 'crypto' | 'onchain' | 'card' | 'sepa';
+
 export interface SendPaymentParams {
   toAgentId: string;
   amount: number;
   currency: Currency;
+  paymentMethod?: PaymentMethod;
   reason?: string;
   metadata?: Record<string, unknown>;
+}
+
+export interface OnchainPaymentResult {
+  transactionId: string;
+  status: string;
+  amount: string;
+  currency: string;
+  fees: string;
+  rail: 'ONCHAIN';
+  txHash: string;
+  network: string;
+  gasPayment: string;
+  explorer: string;
+  recipient: { id: string; name: string };
+  completedAt: string;
 }
 
 export interface TransactionLimits {
